@@ -4,6 +4,7 @@ import com.example.demo.models.AlarmsModel
 import com.example.demo.models.AlarmsValue
 import com.example.demo.models.AlarmsValues
 import com.example.demo.controllers.LogHandler.bufferedWriter
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleDoubleProperty
@@ -31,8 +32,9 @@ object AlarmsController {
     fun addDataToAlarmList(data: AlarmsValue) {
         if (isAlarmsActive.value) {
             val date = data.date
-            alarmsData.date = date
-            alarmsData.data = data.data
+//            alarmsData.date = date
+//            alarmsData.data = data.data
+            alarmsData = data
             when (whichTypeOfLimits.value) {
                 "OL" -> {
                     if (data.data.toInt() > higherLimit.value) {
@@ -68,10 +70,12 @@ object AlarmsController {
             val nameOfAlarmLog = "Alarms ${LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm"))}"
             val fileWriter = FileWriter("${nameOfAlarmLog}.txt", true)
             bufferedWriter = BufferedWriter(fileWriter)
-            bufferedWriter.write(GsonBuilder().setPrettyPrinting().create().toJson(alarmsAllData))
+            val data = GsonBuilder().setPrettyPrinting().create().toJson(alarmsAllData)
+            bufferedWriter.write(data)
             bufferedWriter.flush()
             bufferedWriter.close()
-            println("Datos guardados")// \n${Gson().toJson(data)}")
+            println("Datos guardados")
+            println(data)
         } catch (e: Exception) {
             println("NO ENCUENTRA LA WEA DE ARCHIVO PAL LOG!... POR QUE LA BORRASTEEEEEE!!!!!!: ${e}")
         }

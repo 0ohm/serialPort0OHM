@@ -89,10 +89,10 @@
   },
   "ALARMS": {
     "TYPEOFLIMITS": [
-      true,
       false,
       false,
-      false
+      false,
+      true
     ]
   },
   "THEME": "0ohmTheme"
