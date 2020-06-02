@@ -1,0 +1,99 @@
+{
+  "MACROS": [
+    {
+      "MACRO": "1",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "1111",
+      "SELECTED": true
+    },
+    {
+      "MACRO": "2",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "2222",
+      "SELECTED": true
+    },
+    {
+      "MACRO": "0x04",
+      "HEX": true,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": true
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    },
+    {
+      "MACRO": "",
+      "HEX": false,
+      "ENTER": false,
+      "DELAY": "",
+      "SELECTED": false
+    }
+  ],
+  "DATATYPEFROMPORT": [
+    false,
+    false,
+    true,
+    false
+  ],
+  "DATATYPETOPORT": [
+    true,
+    false,
+    false,
+    false
+  ],
+  "CHART": {
+    "AUTORANGE": false,
+    "CONTINOUSCHART": false
+  },
+  "ALARMS": {
+    "TYPEOFLIMITS": [
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "THEME": "0ohmTheme"
+}
